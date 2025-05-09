@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beaver Tailwater</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Beaver Tailwater</h1>
+    <h2>Generation Schedule</h2>
+  </header>
+
+  <section id="metrics">
+    <div>
+      <h3>Tailwater</h3>
+      <p id="tailwater-card">—</p>
+    </div>
+    <div>
+      <h3>Elevation</h3>
+      <p id="elevation-card">—</p>
+    </div>
+    <div>
+      <h3>Generation</h3>
+      <p id="generation-card">—</p>
+    </div>
+    <div>
+      <h3>Total</h3>
+      <p id="release-card">—</p>
+    </div>
+  </section>
+
+  <section>
+    <h3>Tailwater</h3>
+    <canvas id="tailwaterChart"></canvas>
+  </section>
+  <section>
+    <h3>Turbine & Spillway Release</h3>
+    <canvas id="releaseChart"></canvas>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
