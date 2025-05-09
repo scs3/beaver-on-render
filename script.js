@@ -47,17 +47,7 @@ fetch(dataUrl)
       options: {
         responsive: true,
         plugins: {
-          legend: { position: 'top' },
-          title: { display: true, text: '' }
-        },
-        scales: {
-          x: {
-            ticks: {
-              callback: function(val, index) {
-                return this.getLabelForValue(val);
-              }
-            }
-          }
+          legend: { position: 'top' }
         }
       }
     });
@@ -84,16 +74,11 @@ fetch(dataUrl)
       options: {
         responsive: true,
         plugins: {
-          legend: { position: 'top' },
-          title: { display: true, text: '' }
+          legend: { position: 'top' }
         },
         scales: {
-          x: {
-            stacked: true
-          },
-          y: {
-            stacked: true
-          }
+          x: { stacked: true },
+          y: { stacked: true }
         }
       }
     });
