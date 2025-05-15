@@ -6,6 +6,11 @@
   ],
   "routes": [
     { "src": "/api/beaver", "dest": "/api/beaver.js" },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|svg|gif))",
+      "headers": { "cache-control": "max-age=31536000" },
+      "continue": true
+    },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
