@@ -1,4 +1,5 @@
-const dataUrl = "/api/beaver";
+const dataUrl = "https://beaver-backend.onrender.com/api/beaver";
+
 
 fetch(dataUrl)
   .then(response => response.text())
