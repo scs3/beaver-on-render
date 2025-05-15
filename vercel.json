@@ -2,15 +2,13 @@
   "version": 2,
   "builds": [
     { "src": "api/beaver.js", "use": "@vercel/node" },
-    { "src": "index.html", "use": "@vercel/static" }
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "*.js", "use": "@vercel/static" },
+    { "src": "*.css", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/beaver", "dest": "/api/beaver.js" },
-    {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|svg|gif))",
-      "headers": { "cache-control": "max-age=31536000" },
-      "continue": true
-    },
+    { "src": "/(.*\\.(js|css|png|jpg|jpeg|svg|gif))", "continue": true },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
